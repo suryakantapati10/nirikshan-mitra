@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gov-navy: #0B1F33;
+  --color-gov-deep: #071421;
+  --color-gov-blue: #0056A6;
+  --color-gov-blue-hover: #004482;
+  --color-gov-blue-light: #EBF3FA;
+
+  --color-gov-bg: #F8FAFC;
+  --color-gov-surface: #FFFFFF;
+  --color-gov-surface-alt: #F1F5F9;
+  --color-gov-border: #E2E8F0;
+  --color-gov-border-strong: #CBD5E1;
+
+  --color-gov-text: #0F172A;
+  --color-gov-text-muted: #334155;
+  --color-gov-text-sub: #475569;
+
+  --color-status-pass: #087443;
+  --color-status-pass-bg: #ECFDF3;
+  --color-status-pass-border: #A7E3BE;
+
+  --color-status-review: #A15C00;
+  --color-status-review-bg: #FFFAEB;
+  --color-status-review-border: #F3D38A;
+
+  --color-status-fail: #B42318;
+  --color-status-fail-bg: #FEF3F2;
+  --color-status-fail-border: #F2B8B5;
+
+  --color-status-na: #667085;
+  --color-status-na-bg: #F2F4F7;
+  --color-status-na-border: #D0D5DD;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-gov-bg, #F8FAFC);
+  color: var(--color-gov-text, #0F172A);
+  font-family: "Inter", "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Retain classic monospace tags */
+.mono-id {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #0056A6;
+}
+
+/* Framing guides for camera */
+.framing-corner {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-color: #FFFFFF;
+  border-style: solid;
+}
+.framing-corner.top-left {
+  top: 0;
+  left: 0;
+  border-width: 3px 0 0 3px;
+}
+.framing-corner.top-right {
+  top: 0;
+  right: 0;
+  border-width: 3px 3px 0 0;
+}
+.framing-corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 3px 3px;
+}
+.framing-corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-width: 0 3px 3px 0;
+}
+
+/* Package Panels Grid & Slot Item Dimensions */
+.panels-slots-grid {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.panel-slot-item {
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+}
+
+.slot-upload-trigger,
+.slot-camera-trigger {
+  box-sizing: border-box;
+  min-width: 0;
+  white-space: nowrap;
+}
+
